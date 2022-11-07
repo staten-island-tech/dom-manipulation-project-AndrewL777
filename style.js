@@ -15,3 +15,10 @@ function backgroundAndText(background, text) {
 DOMSelectors.button.addEventListener("click", function () {
   backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 });
+
+function chanbgeLi() {
+  DOMSelectors.points.forEach((point) => {
+    console.log(point);
+  });
+}
+chanbgeLi();
