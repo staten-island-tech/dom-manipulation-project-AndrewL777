@@ -28,4 +28,4 @@ DOMSelectors.button.insertAdjacentHTML(
   `<p>you can have multiple HTML elements in the same DOMSelector!<p>
   <img src="https://i.imgur.com/zQ5ds03.jpeg" class="cat-poster"></img>`
 );
-// you can put multiple HTML tags in the same DOMSelector as if you were writing out regular HTML, you're also able to assigned classes and ids that can be used for styling the elements you add through js.
+// you can put m ultiple HTML tags in the same DOMSelector as if you were writing out regular HTML, you're also able to assigned classes and ids that can be used for styling the elements you add through js.
