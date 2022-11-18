@@ -1,16 +1,14 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   artist: document.getElementById("artist"),
-  title: document.getElementById("tile"),
+  title: document.getElementById("title"),
   form: document.getElementById("form"),
   display: document.getElementById("display"),
   url: document.getElementById("url"),
 };
 function card() {
-  url = DOMSelectors.urlInput.value;
-  artist = DOMSelectors.artistInput.value;
-  title = DOMSelectors.titleInput.value;
-  DOMSelectors.display.insertAdjacentHTML(
+
+  DOMSelectors.form.insertAdjacentHTML(
     "afterend",
     `
     <div class="display-card"> 
