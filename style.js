@@ -7,14 +7,13 @@ const DOMSelectors = {
   url: document.getElementById("url"),
 };
 function card() {
-
   DOMSelectors.form.insertAdjacentHTML(
     "afterend",
     `
     <div class="display-card"> 
-    <img class"display-img" src="${DOMSelectors.url.value}" /><img>
-    <h2 class="display-artist">${DOMSelectors.artist.value}</h2>
-    <h3 class="display-title">${DOMSelectors.title.value}</h3>
+    <img class src="${DOMSelectors.url.value}" /><img>
+    <h2 class="artist">${DOMSelectors.artist.value}</h2>
+    <h3 class="title">${DOMSelectors.title.value}</h3>
     <button class="remove btn">Remove</button>
     </div>
     `
@@ -24,4 +23,14 @@ function card() {
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   card();
+});
+function deletebtn() {
+  const display = document.getElementById("display");
+  display.addEventListener("click", () => {
+    display.remove();
+  });
+}
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  deletebtn();
 });
