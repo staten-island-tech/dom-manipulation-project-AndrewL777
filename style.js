@@ -6,6 +6,10 @@ const DOMSelectors = {
   display: document.getElementById("display"),
   url: document.getElementById("url"),
 };
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  card();
+});
 function card() {
   DOMSelectors.form.insertAdjacentHTML(
     "afterend",
@@ -18,19 +22,15 @@ function card() {
     </div>
     `
   );
+  deletebtn();
 }
 
-DOMSelectors.form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  card();
-});
 function deletebtn() {
-  const display = document.getElementById("display");
-  display.addEventListener("click", () => {
-    display.remove();
+  let del = document.querySelectorAll(".remove");
+
+  del.forEach((bt) => {
+    bt.addEventListener("click", function (bt) {
+      this.parentElement.remove();
+    });
   });
 }
-DOMSelectors.form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  deletebtn();
-});
