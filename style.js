@@ -22,7 +22,22 @@ function card() {
     </div>
     `
   );
+
   deletebtn();
+}
+
+function card() {
+  DOMSelectors.form.insertAdjacentHTML(
+    "afterend",
+    `
+    <div class="display-card"> 
+    <img class src="${DOMSelectors.url.value}" /><img>
+    <h2 class="artist">${DOMSelectors.artist.value}</h2>
+    <h3 class="title">${DOMSelectors.title.value}</h3>
+    <button class="remove btn">Remove</button>
+    </div>
+    `
+  );
 }
 
 function deletebtn() {
